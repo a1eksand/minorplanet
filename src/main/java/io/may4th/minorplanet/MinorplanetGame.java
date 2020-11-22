@@ -48,10 +48,10 @@ public class MinorplanetGame extends GameApplication {
 
     @Override
     protected void initInput() {
-        onKey(KeyCode.A, (tpf) -> playerComponent.rotate(-tpf));
-        onKey(KeyCode.D, (tpf) -> playerComponent.rotate(tpf));
-        onKey(KeyCode.W, (tpf) -> playerComponent.engine(tpf));
-        onKey(KeyCode.S, (tpf) -> playerComponent.engine(-tpf));
+        onKey(KeyCode.A, (/*tpf*/) -> playerComponent.rotate(-/*tpf*/ 0.05));
+        onKey(KeyCode.D, (/*tpf*/) -> playerComponent.rotate(/*tpf*/ 0.05));
+        onKey(KeyCode.W, (/*tpf*/) -> playerComponent.engine(/*tpf*/ 0.05));
+        onKey(KeyCode.S, (/*tpf*/) -> playerComponent.engine(-/*tpf*/ 0.05));
     }
 
     @Override
@@ -99,6 +99,7 @@ public class MinorplanetGame extends GameApplication {
             isNewGmaeRequested = false;
             getGameController().startNewGame();
         } else {
+            /*playerComponent.gravity(tpf);*/
             playerComponent.move();
             gameVars.setValue(GameVar.SPEED, (int) playerComponent.getDirection().length());
         }
