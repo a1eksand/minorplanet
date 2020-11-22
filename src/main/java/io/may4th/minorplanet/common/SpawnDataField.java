@@ -1,12 +1,8 @@
 package io.may4th.minorplanet.common;
 
 import com.almasb.fxgl.entity.SpawnData;
-import javafx.geometry.Point2D;
 
 public class SpawnDataField<T> {
-
-    public static final SpawnDataField<Point2D> DIRECTION = new SpawnDataField<>("DIRECTION");
-    public static final SpawnDataField<String> TEXT = new SpawnDataField<>("TEXT");
 
     private final String field;
 
